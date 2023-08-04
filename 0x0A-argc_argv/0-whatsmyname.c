@@ -4,6 +4,7 @@
  * main - Prints own name
  *@argc: Counts number of command line arguements
  *@argv[]: Array containing command arguments
+ *@argv: Contains command line arguements
  *
  * Return: Is 0
  */
