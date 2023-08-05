@@ -1,15 +1,17 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
- *main - Entry point
- *@argc: Counts number of command line arguments
- *@argv[]: An array containing command line arguments
- *@argv: Contains command line arguments
+ *main - Check the code
+ *@argc: Counts number of command arguments
+ *@argv: Array of command arguments
  *
  * Return: Is 0
  */
 int main(int argc, char *argv[])
 {
+	(void) argv;
+
 	printf("%d\n", argc - 1);
 
 	return (0);
