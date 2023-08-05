@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 	if (c < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 
 	c25 = c / 25, c = c % 25;
