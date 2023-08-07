@@ -6,16 +6,15 @@
  * _strdup - Returns a pointer to a new string
  * @str: String input
  *
- * Return: Is NULL or ptr
+ * Return: Is NULL or value of ptr
  */
 char *_strdup(char *str)
 {
-	unsigned int length = strlen(str);
+	size_t length = strlen(str);
 
-	unsigned int i;
+	size_t i;
 
 	char *ptr = (char *)malloc(sizeof(char));
-
 	if (str == NULL)
 	{
 		return (NULL);
