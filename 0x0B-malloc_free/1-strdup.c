@@ -10,13 +10,19 @@
  */
 char *_strdup(char *str)
 {
-	size_t length = strlen(str);
+	size_t length, i;
 
-	size_t i;
-
-	char *ptr = (char *)malloc(length + 1);
+	char *ptr;
 
 	if (str == NULL)
+	{
+		return (NULL);
+	}
+	length = strlen(str);
+
+	ptr = (char *)malloc(length + 1);
+
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
@@ -24,10 +30,7 @@ char *_strdup(char *str)
 	{
 		ptr[i] = str[i];
 	}
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
+
 	return (ptr);
 
 	free(ptr);
