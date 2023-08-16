@@ -7,7 +7,7 @@
  * @size: No. of elements
  * @cmp: Pointer to the function to compare values
  *
- * Return: Is 0, -1 or an index numner
+ * Return: Is -1 or an index numner
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -15,7 +15,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (array == NULL || cmp == NULL)
 	{
-		return (0);
+		return (-1);
 	}
 	if (size <= 0)
 	{
