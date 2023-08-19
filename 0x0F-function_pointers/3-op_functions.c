@@ -12,7 +12,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- * op_add - Calculates difference of a and b
+ * op_sub - Calculates difference of a and b
  * @a: One of the numbers
  * @b: The other number
  *
@@ -23,7 +23,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- * op_sub - Multiplies a and b
+ * op_mul - Multiplies a and b
  * @a: One of the numbers
  * @b: The other number
  *
