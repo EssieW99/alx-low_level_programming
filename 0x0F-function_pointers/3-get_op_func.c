@@ -5,7 +5,7 @@
  * get_op_func - Selects the correct function
  * @s: The operator
  *
- * Return: Is NULL or the value of (ops[i].f)
+ * Return: Is the value of (ops[i].f)
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -17,16 +17,11 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
 	int i = 0;
 
-	while (ops[i].op != NULL)
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 	{
-		if (*ops[i].op != *s)
-		{
-			return (ops[i].f);
-		}
 		i++;
 	}
-	return (NULL);
+	return (ops[i].f);
 }
