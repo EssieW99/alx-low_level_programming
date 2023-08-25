@@ -20,11 +20,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	newnode->str = strdup(str);
-
-	if (newnode->str == NULL)
-	{
-		return (NULL);
-	}
 	newnode->len = strlen(str);
 	newnode->next = NULL;
 
@@ -33,11 +28,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = newnode;
 		return (newnode);
 	}
-	while (tmp->next)
+	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 	}
 	tmp->next = newnode;
-
 	return (newnode);
 }
