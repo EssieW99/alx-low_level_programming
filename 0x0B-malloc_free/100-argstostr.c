@@ -41,7 +41,7 @@ char *argstostr(int ac, char **av)
 		}
 		ptr[argument++] = '\n';
 	}
-	ptr[argument++] = '\0';
+	ptr[argument] = '\0';
 
 	return (ptr);
 }
