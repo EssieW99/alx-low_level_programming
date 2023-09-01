@@ -7,15 +7,28 @@
  */
 void print_binary(unsigned long int n)
 {
+	unsigned int long tmp = n;
+	int i = 0;
+
+	unsigned int long binary;
 
 	if (n == 0)
 	{
 		_putchar('0');
+		return;
 	}
 
-	while (n > 0)
+	while (tmp > 0)
 	{
-		if (n & 1)
+		tmp >>= 1;
+		i++;
+	}
+
+	binary = 1UL << (i - 1);
+
+	while (binary > 0)
+	{
+		if (n & binary)
 		{
 			_putchar('1');
 		}
@@ -23,6 +36,6 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-		n >>= 1;
+		binary >>= 1;
 	}
 }
