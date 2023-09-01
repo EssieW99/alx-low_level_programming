@@ -13,7 +13,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	unsigned long int value;
 
-	if (n == 0 || m == 0)
+	if (n == 0)
+	{
+		return (0);
+	}
+	if (m == 0)
 	{
 		return (0);
 	}
