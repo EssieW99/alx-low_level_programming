@@ -1,0 +1,6 @@
+    # Create a Makefile
+
+    CC = gcc
+    SRC = *.c
+    all:
+            $(CC) $(SRC) -o school
